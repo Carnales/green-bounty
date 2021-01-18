@@ -33,7 +33,7 @@ $(document).ready(function(){
             elem1.attr("target","_blank");
             var elem2 = $('<li>');
             elem2.append($('<h3>').text(result.title));
-            //if(result.thumbnail) elem.append($('<img>').attr('width',150).attr('src',result.thumbnail.source));
+            if(result.thumbnail) elem.append($('<img>').attr('width',150).attr('src',result.thumbnail.source));
             elem2.append($('<p>').text(result.extract));
             elem1.append(elem2);
             resultArea.append(elem1);
@@ -66,7 +66,7 @@ $(document).ready(function(){
       $("footer").empty();
       displayResults(); 
       $("#searchBox").animate({'padding-top':"0"}, 600);
-      $(".container-fluid").animate({height:"30vh"}, 600);
+      $(".container-fluid").animate({}, 600);
     });
     
     searchBar.keypress(function(e){

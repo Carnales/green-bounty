@@ -1,0 +1,19 @@
+{% extends 'bounties/main.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form class="box" method="post">
+                {% csrf_token %}
+                {{form}}
+                <!-- <h1>Register</h1>
+                <p class="text-muted"> Please enter your name and password!</p> 
+                <input type="text" name="" placeholder="Name"> 
+                <input type="password" name="" placeholder="Password">   -->
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

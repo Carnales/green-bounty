@@ -1,23 +1,73 @@
 {% extends 'bounties/main.html' %}
 {% load static %}
 {% block content %}
-<header class="container-fluid">
+
+<script>
+  $(document).ready(function(){
+    var keyword = "";
+    var resultArea = $("#results");
+    var searchBar = $("#searchBar");
+    var searchButton = $(".glyphicon-search");
+    var displayResults = function(){
+            var bounties = '{{ bounties | escapejs}}';
+            var objects = JSON.parse(bounties);
+            var in_my_city = [];
+            for (let i = 0; i < objects.length; i++) {
+              if (objects[i].fields.city === searchBar.val()){
+                in_my_city.push(objects[i]);
+              }
+              
+            }
+
+            $.map(in_my_city, function(result){
+                var elem1 = $('<a>');
+                var elem2 = $('<li>');
+                elem1.attr("href", "{% url 'submit' %}");
+                elem1.attr("target","_blank");
+                elem2.append($('<img>').attr('width',150).attr('src', "/static/images/" +result.fields.image));
+                console.log(result.fields.image);
+                elem2.append($('<p>').text(result.extract));
+                elem2.append($('<h1>').text(result.fields.city));
+                elem2.append($('<h2>').text(result.fields.location));
+                elem1.append(elem2);
+                resultArea.append(elem1);
+            $("footer").append("");
+      });   
+    };
+
+    searchButton.click(function(){
+      keyword = searchBar.val();
+      resultArea.empty();
+      $("footer").empty();
+      displayResults(); 
+      $("#searchBox").animate({'padding-top':"0"}, 600);
+      $(".container-fluid").animate({}, 600);
+    });
+    
+    searchBar.keypress(function(e){
+        if(e.keyCode==13)
+        $(searchButton).click();
+    });
+  
+  });
+</script>
+
+<div>
     <div class="container text-center" id="searchBox">
-      <h1>wiki viewer</h1>
+      <h1>Bounties Near You</h1>
       <div class="form col-xs-12">   
-          <input class="col-xs-9" id="searchBar" type="text" placeholder="search"/>
-          <span class="glyphicon glyphicon-search col-xs-1" data-toggle="tooltip" title="Search" aria-hidden="true"></span>
-          <span class="glyphicon bar col-xs-1" id="submit"><b>|</b></span>
-          <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><span class="glyphicon glyphicon-random col-xs-1"  data-toggle="tooltip" title="Random topic"></span></a>
+          <input class="col-xs-9" id="searchBar" type="text" placeholder="Location"/>
+          <span class="glyphicon glyphicon-search col-xs-1" data-toggle="tooltip" title="Search"></span>
+          <a href="{% url 'create' %}"><span class="glyphicon glyphicon glyphicon-plus col-xs-1" data-toggle="tooltip" title="Add"></span></a>
         </div>
       </div>
     </div>  
-</header>
-    <div id="mainBody" class="container text-center">
-        <ul id="results">
-        </ul>
-    </div>
-  <footer class="text-center">
+</div>
+<div id="mainBody" class="container text-center">
+    <ul id="results">
+    </ul>
+</div>
+<footer class="text-center">
     
-  </footer>
+</footer>
 {% endblock content %}

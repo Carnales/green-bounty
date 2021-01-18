@@ -4,3 +4,4 @@ from .models import *
 admin.site.register(Hunter)
 admin.site.register(Bounty)
 admin.site.register(Organization)
+admin.site.register(Transaction)

@@ -1,0 +1,31 @@
+{% extends 'bounties/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container bootstrap snippets bootdey">
+<div class="row">
+  <div class="profile-nav col-md-3">
+      <div class="panel">
+          <div class="user-heading round">
+              <a href="#">
+                  <img src="https://styles.redditmedia.com/t5_ugwkm/styles/profileIcon_2u1901x4zns51.jpg?width=256&height=256&crop=256:256,smart&frame=1&s=c4a899167ae11df465c7d9ec93c0190abcc3cedb"  width="200px" alt="">
+              </a>
+              <h1>{{hunter.name}}</h1>
+          </div>
+      </div>
+  </div>
+  <div class="profile-info col-md-9">
+      <div class="panel">
+          <footer class="panel-footer">
+              <ul class="nav nav-pills">
+                  <li><strong>Balance: </strong> <h1>{{hunter.balance}}</h1></li>
+                  <li><strong>Bounties: </strong> <h1>{{hunter.bounties}}</h1></li>
+                  <li><strong>Points: </strong> <h1>{{hunter.points}}</h1></li>
+              </ul>
+          </footer>
+      </div>
+        <div class="bio-graph-heading">
+          This page will soon feature your location and contributions!
+    </div>
+</div>
+{% endblock content %}
