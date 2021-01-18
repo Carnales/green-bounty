@@ -6,6 +6,9 @@ our environment is decaying to the point of no return. We thought to ourselves, 
 Rohan Bansal would say, how can we, ThetaHackers, impact our world? What better way to do just that than foster local
 change with an environment bounty platform! Join us to see more...
 
+## Elevator Pitch
+The world is in a state of peril… So we thought to ourselves, how do we make the best of this? What better way to do just that than foster local change with an environmental bounty platform!
+
 ## Guide
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/wwTFL5zMVSs/0.jpg)](https://www.youtube.com/watch?v=wwTFL5zMVSs)
 
