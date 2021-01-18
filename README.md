@@ -7,7 +7,7 @@ Rohan Bansal would say, how can we, ThetaHackers, impact our world? What better 
 change with an environment bounty platform! Join us to see more...
 
 ## Guide
-[![Guide]](https://youtu.be/wwTFL5zMVSs)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/wwTFL5zMVSs/0.jpg)](https://www.youtube.com/watch?v=wwTFL5zMVSs)
 
 ## Setup
 
