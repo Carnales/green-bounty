@@ -7,3 +7,4 @@ Environmental bounty program for the ThetaHacks hackathon.
 
 - "SideNav" - https://codepen.io/miguel96/pen/oxddqb
 
+- "Bootstrap 4 Animated Login Form" - https://bbbootstrap.com/snippets/animated-login-form-95290954
