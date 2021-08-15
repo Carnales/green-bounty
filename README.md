@@ -1,5 +1,5 @@
 # green-bounty
-Environmental bounty program for the ThetaHacks hackathon.
+Environmental bounty program and third place winner for the ThetaHacks hackathon.
 
 The world is at a state of peril. On one side COVID-19 is shattering lives and relationship alike, and on the other hand 
 our environment is decaying to the point of no return. We thought to ourselves, how do we make the best of this? Or as 
